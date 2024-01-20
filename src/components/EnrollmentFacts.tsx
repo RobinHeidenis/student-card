@@ -5,6 +5,8 @@ import {
 	RiOthersGraduationCapFill,
 	RiSystemDashboardFill,
 } from "solid-icons/ri";
+import { settingsStore } from "../lib/settingsStore";
+import { getSetting } from "../lib/getSetting";
 
 export const EnrollmentFacts: Component = () => {
 	const isAfterAugust = new Date().getMonth() >= 8;
@@ -17,19 +19,33 @@ export const EnrollmentFacts: Component = () => {
 				"w-11/12 bg-white drop-shadow-sm border border-gray-200 self-center rounded-lg pt-4 flex mb-20 flex-col gap-y-8 pr-5 pb-5"
 			}
 		>
-			<FactRow icon={FaRegularCalendar} title={"Academic year"} value={academicYear.toString()}/>
+			<FactRow
+				icon={FaRegularCalendar}
+				title={"Academic year"}
+				value={academicYear.toString()}
+			/>
 			<FactRow
 				icon={FaSolidClock}
 				title={"Valid"}
-				value={`From 1 September ${academicYear} up to and including 31 August ${academicYear + 1}`}
+				value={`From 1 September ${academicYear} up to and including 31 August ${
+					academicYear + 1
+				}`}
 			/>
 			<FactRow
 				icon={RiOthersGraduationCapFill}
 				title={"Course"}
-				value={"HBO-ICT"}
+				value={getSetting("course", "HBO-ICT")}
 			/>
-			<FactRow icon={FaSolidCode} title={"Code"} value={"ICT"}/>
-			<FactRow icon={RiSystemDashboardFill} title={"Variant"} value={"Voltijd"}/>
+			<FactRow
+				icon={FaSolidCode}
+				title={"Code"}
+				value={getSetting("code", "ICT")}
+			/>
+			<FactRow
+				icon={RiSystemDashboardFill}
+				title={"Variant"}
+				value={getSetting("variant", "Full Time")}
+			/>
 		</div>
 	);
 };
