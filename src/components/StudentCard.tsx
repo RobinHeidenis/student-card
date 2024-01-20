@@ -1,6 +1,7 @@
 import { DimmedText } from "./DimmedText";
 import { Barcode } from "@solid-bricks/barcode";
 import { Component } from "solid-js";
+import thuasLogoUrl from '../thuas-logo.png';
 
 export const StudentCard: Component = () => {
 	const params = new URLSearchParams(window.location.search);
@@ -17,7 +18,7 @@ export const StudentCard: Component = () => {
 				{params.get("birthdate") ?? "28 February 2000"}
 			</DimmedText>
 			<img
-				src={params.get("image") ?? "./thuas-logo.png"}
+				src={params.get("image") ?? thuasLogoUrl}
 				alt={"School logo"}
 				class={`h-16 mt-1 ${!params.has("image") ? "-left-2" : ""} relative`}
 			/>
