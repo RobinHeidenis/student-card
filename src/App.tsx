@@ -6,7 +6,7 @@ import { BottomNavBar } from "./components/BottomNavBar";
 import { SettingsModal } from "./components/SettingsModal";
 
 const App: Component = () => (
-	<div class={"min-h-screen w-full bg-white flex flex-col"}>
+	<div class={"min-h-screen w-full bg-white flex flex-col select-none"}>
 		<Background />
 		<StudentCard />
 		<EnrollmentFacts />
