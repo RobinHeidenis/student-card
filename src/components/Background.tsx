@@ -1,5 +1,6 @@
 import { Component } from "solid-js";
 import { RiArrowsArrowLeftSLine } from "solid-icons/ri";
+import {settingsStore} from "../settingsStore";
 
 export const Background: Component = () => {
 	const params = new URLSearchParams(window.location.search);
@@ -8,8 +9,8 @@ export const Background: Component = () => {
 		<div
 			class={"h-52 bg-background flex items-center fixed w-screen"}
 			style={
-				params.has("background")
-					? { "background-color": params.get("background") }
+				params.has("background") || settingsStore.color
+					? { "background-color": params.get("background") ?? settingsStore.color }
 					: {}
 			}
 		>

@@ -15,7 +15,6 @@ export default defineConfig({
         registerType: 'autoUpdate',
         injectRegister: 'auto',
         manifest: {
-          start_url: '.',
           name: "Student Card",
           short_name: "Student Card",
           description: "Customizable student card app to fool companies",
