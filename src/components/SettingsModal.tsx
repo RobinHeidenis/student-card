@@ -7,7 +7,7 @@ export const SettingsModal = () => {
 		<dialog
 			id={"settingsModal"}
 			class={
-				"w-10/12 bg-white drop-shadow-sm border border-gray-200 rounded-lg p-4 focus:outline-0"
+				"w-10/12 bg-white drop-shadow-sm border border-gray-200 rounded-lg p-4 focus:outline-0 select-none"
 			}
 		>
 			<div class={"flex justify-between"}>
