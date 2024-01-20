@@ -95,7 +95,7 @@ export const SettingsModal = () => {
 								text: "Check out my student card!",
 								url: `${window.location.origin}?${new URLSearchParams({
 									...settingsStore,
-									image: settingsStore.image ?? '',
+									image: settingsStore.image ?? "",
 								}).toString()}`,
 							});
 						}}
