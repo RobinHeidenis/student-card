@@ -1,6 +1,8 @@
 import { IoClose } from "solid-icons/io";
 import { settingsStore } from "../lib/settingsStore";
 import { ColorInput, Input } from "./Input";
+import { BiSolidShare } from "solid-icons/bi";
+import { OcShareandroid2, OcShareandroid3 } from "solid-icons/oc";
 
 export const SettingsModal = () => {
 	return (
@@ -73,14 +75,34 @@ export const SettingsModal = () => {
 					id={"image"}
 					placeholder={"https://school.com/logo.png"}
 				/>
-				<button
-					type={"submit"}
-					class={
-						"mt-4 bg-background hover:brightness-90 text-white font-semibold py-2 px-4 rounded-lg w-full"
-					}
-				>
-					Save
-				</button>
+				<div class={"flex gap-x-2 mt-4"}>
+					<button
+						type={"submit"}
+						class={
+							"bg-background hover:brightness-90 text-white font-semibold py-2 px-4 rounded-md w-5/6"
+						}
+					>
+						Save
+					</button>
+					<button
+						type={"button"}
+						class={
+							"bg-background hover:brightness-90 text-white rounded-md w-1/6 flex items-center justify-center"
+						}
+						onClick={() => {
+							navigator.share({
+								title: "Student Card",
+								text: "Check out my student card!",
+								url: `${window.location.origin}?${new URLSearchParams({
+									...settingsStore,
+									image: settingsStore.image ?? '',
+								}).toString()}`,
+							});
+						}}
+					>
+						<OcShareandroid3 />
+					</button>
+				</div>
 			</form>
 		</dialog>
 	);

@@ -6,7 +6,7 @@ export const getSetting = (
 	ignoreParams = false,
 ) => {
 	const params = new URLSearchParams(window.location.search);
-	if (!ignoreParams && params.get(key) !== null) {
+	if (!ignoreParams && params.get(key)) {
 		return params.get(key);
 	}
 	return settingsStore[key] ?? defaultValue;
