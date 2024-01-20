@@ -14,12 +14,16 @@
     <summary>Table of Contents</summary>
     <ol>
         <li>
+            <a href="#about-the-project">About the project</a>
+        </li>
+        <li>
           <a href="#features">Features</a>
         </li>
         <li>
           <a href="#technologies">Technologies</a>
           <ul>
             <li><a href="#language">Language</a></li>
+            <li><a href="#framework">Framework</a></li>
             <li><a href="#styling">Styling</a></li>
             <li><a href="#hosted-on">Hosted on</a></li>
             <li><a href="#installable-as">Installable As</a></li>
@@ -28,7 +32,8 @@
         <li>
           <a href="#screenshots">Screenshots</a>
           <ul>
-            <li><a href="#student-card">Student Card</a></li>
+            <li><a href="#original-app">Original App</a></li>
+            <li><a href="#student-card-1">Student Card</a></li>
             <li><a href="#settings">Settings</a></li>
             <li><a href="#theme">Theme</a></li>
             <li><a href="#school-logo">School logo</a></li>
