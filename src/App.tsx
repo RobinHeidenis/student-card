@@ -46,7 +46,6 @@ const App: Component = () => {
 				method={"dialog"}
 				class={"mt-3"}
 				onsubmit={() => {
-					console.log("image:", settingsStore.image)
 					localStorage.setItem("student-card:name", settingsStore.name);
 					localStorage.setItem("student-card:number", settingsStore.number);
 					localStorage.setItem(

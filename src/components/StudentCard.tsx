@@ -16,10 +16,10 @@ export const StudentCard: Component = () => {
 			<h1 class={"font-bold mt-3"}>{params.get("name") ?? settingsStore.name ?? "Student"}</h1>
 			<DimmedText m={"mt-2"}>{params.get("number") ?? settingsStore.number ?? "19230485"}</DimmedText>
 			<DimmedText m={"mt-2"}>
-				{params.get("birthdate") ?? settingsStore.dateOfBirth ?? "28 February 2000"}
+				{new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(params.get("birthdate") ?? settingsStore.dateOfBirth ?? "28-02-2000	"))}
 			</DimmedText>
 			<img
-				src={params.get("image") || settingsStore.image || thuasLogoUrl}
+				src={params.get("image") || (settingsStore.image && settingsStore.image !== "null" ? settingsStore.image : null) || thuasLogoUrl}
 				alt={"School logo"}
 				class={`h-16 mt-1 ${!params.has("image") && !settingsStore.image ? "-left-2" : ""} relative`}
 			/>
