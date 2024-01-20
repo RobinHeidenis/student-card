@@ -17,16 +17,16 @@ import { DimmedText } from "./components/DimmedText";
 import { FactRow } from "./components/FactRow";
 import { NavItem } from "./components/NavItem";
 import { BiSolidCheckSquare } from "solid-icons/bi";
-import {Background} from "./components/Background";
-import {StudentCard} from "./components/StudentCard";
+import { Background } from "./components/Background";
+import { StudentCard } from "./components/StudentCard";
 import { EnrollmentFacts } from "./components/EnrollmentFacts";
-import {BottomNavBar} from "./components/BottomNavBar";
+import { BottomNavBar } from "./components/BottomNavBar";
 
 const App: Component = () => {
 	const params = new URLSearchParams(window.location.search);
 
 	return (
-		<div class={"min-h-screen w-full bg-white flex flex-col"} >
+		<div class={"min-h-screen w-full bg-white flex flex-col"}>
 			<Background />
 			<StudentCard />
 			<EnrollmentFacts />
