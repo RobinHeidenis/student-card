@@ -1,6 +1,6 @@
 import { Component } from "solid-js";
-import {setSettingsStore, settingsStore} from "../lib/settingsStore";
-import {getSetting} from "../lib/getSetting";
+import { setSettingsStore, settingsStore } from "../lib/settingsStore";
+import { getSetting } from "../lib/getSetting";
 
 export const Input: Component<{
 	label: string;
@@ -14,10 +14,7 @@ export const Input: Component<{
 }> = (props) => {
 	return (
 		<div class={props.topMargin ?? "mt-4"}>
-			<label
-				for={props.id}
-				class={`block mb-2 ${props.labelClass}`}
-			>
+			<label for={props.id} class={`block mb-2 ${props.labelClass}`}>
 				{props.label}
 			</label>
 			<input
@@ -44,10 +41,7 @@ export const ColorInput: Component<{
 }> = (props) => {
 	return (
 		<div class={props.topMargin ?? "mt-4"}>
-			<label
-				for={props.id}
-				class={`block mb-2 ${props.labelClass}`}
-			>
+			<label for={props.id} class={`block mb-2 ${props.labelClass}`}>
 				{props.label}
 			</label>
 			<input

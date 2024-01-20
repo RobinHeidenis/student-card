@@ -5,7 +5,6 @@ import {
 	RiOthersGraduationCapFill,
 	RiSystemDashboardFill,
 } from "solid-icons/ri";
-import { settingsStore } from "../lib/settingsStore";
 import { getSetting } from "../lib/getSetting";
 
 export const EnrollmentFacts: Component = () => {
