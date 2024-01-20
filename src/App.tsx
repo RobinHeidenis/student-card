@@ -19,9 +19,11 @@ import { NavItem } from "./components/NavItem";
 import { BiSolidCheckSquare } from "solid-icons/bi";
 
 const App: Component = () => {
+	const params = new URLSearchParams(window.location.search);
+
 	return (
-		<div class={"min-h-screen w-full bg-white flex flex-col"}>
-			<div class={"h-52 bg-background flex items-center fixed w-screen"}>
+		<div class={"min-h-screen w-full bg-white flex flex-col"} >
+			<div class={"h-52 bg-background flex items-center fixed w-screen"} style={params.has('background') ? {"background-color": params.get('background')} : {}}>
 				<div class={"flex flex-row items-center"}>
 					<RiArrowsArrowLeftSLine class={"h-6 w-6 mx-4"} />
 					<h1 class={"text-2xl"}>Student card</h1>
@@ -32,16 +34,16 @@ const App: Component = () => {
 					"w-11/12 bg-white drop-shadow-sm border border-gray-200 self-center rounded-lg -top-5 mt-48 relative p-4"
 				}
 			>
-				<h1 class={"font-bold mt-3"}>Student Man</h1>
-				<DimmedText m={"mt-2"}>19020384</DimmedText>
-				<DimmedText m={"mt-2"}>28 February 2000</DimmedText>
+				<h1 class={"font-bold mt-3"}>{params.get('name') ?? 'Student'}</h1>
+				<DimmedText m={"mt-2"}>{params.get('number') ?? '19230485'}</DimmedText>
+				<DimmedText m={"mt-2"}>{params.get('birthdate') ?? '28 February 2000'}</DimmedText>
 				<img
-					src={"./thuas-logo.png"}
+					src={params.get('image') ?? "./thuas-logo.png"}
 					alt={"School logo"}
-					class={"w-1/2 mt-1 -left-2 relative"}
+					class={`h-16 mt-1 ${!params.has('image') ? '-left-2' : ''} relative`}
 				/>
 				<Barcode
-					value={"19000502"}
+					value={params.get('number') ?? '19230485'}
 					options={{ height: 40, format: "CODE39", displayValue: false }}
 					class={"w-full mt-3"}
 				/>
