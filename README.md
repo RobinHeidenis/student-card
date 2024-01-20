@@ -34,6 +34,9 @@
             <li><a href="#school-logo">School logo</a></li>
           </ul>
         </li>
+        <li>
+          <a href="#example-share-url">Example Share URL</a>
+        </li>
       </ol>
 </details>
 <!-- TOC -->
@@ -149,3 +152,7 @@ The school logo can be changed in the settings modal. You can fill in a URL to a
 
 ![logo-changed.png](assets/logo-changed.png)
 </details>
+
+## Example Share URL
+
+[John Nolan](https://fractum-student-card.vercel.app/?name=J.H.+Nolan&number=25253&dateOfBirth=1970-02-28&course=Police+Training&code=PT&variant=Full+Time&color=%23052942&image=https%3A%2F%2Flapdonlinestrgeacc.blob.core.usgovcloudapi.net%2Flapdonlinemedia%2FLAPD-Badge-Logo-TEST-2-649a1bc2cfefb.png)
